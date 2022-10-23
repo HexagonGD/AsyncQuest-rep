@@ -1,6 +1,5 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
-using UnityEngine;
 
 public class Writer
 {
@@ -16,8 +15,6 @@ public class Writer
         using (var stream = new StreamWriter(_path, true))
         {
             await stream.WriteLineAsync(str);
-            await stream.FlushAsync();
         }
-        Debug.Log("Write");
     }
 }
